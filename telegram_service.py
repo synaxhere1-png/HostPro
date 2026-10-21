@@ -33,7 +33,7 @@ def get_telegram_bot_username():
     env_user = os.environ.get("TELEGRAM_BOT_USERNAME", "SynaxHosterBot").strip()
     if env_user:
         return env_user.lstrip("@")
-    db_user = get_setting("telegram_bot_username", "SynaxHosterBot)
+    db_user = get_setting("telegram_bot_username", "SynaxHosterBot")
     return db_user.strip().lstrip("@") if db_user else "SynaxHosterBot"
 
 def send_telegram_otp(telegram_id: str) -> dict:
